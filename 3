@@ -1,0 +1,28 @@
+package com.company;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.spi.CalendarDataProvider;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int day; int procentyear = 12;
+        int depozit = 10000;
+        day = 365;
+        Date endDate1 = new GregorianCalendar(2020, 06, 05, 14, 00).getTime();
+        Date startDate1   = new Date();
+        long diff = endDate1.getTime() - startDate1.getTime();
+        int days = (int) (diff/(24*60*60*1000));
+        double profit;
+        profit = (depozit*procentyear*days/ (day* 100));
+        System.out.println(profit);
+        System.out.println(days);
+        System.out.println("Startdate -"+startDate1+" endDate - "+endDate1);
+
+
+    }
+}

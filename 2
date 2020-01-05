@@ -1,0 +1,16 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner (System.in);
+        String line = sc.nextLine();
+        double funt = Double.valueOf(line);
+        double k = 453.6;
+        double kg = funt * k;
+        System.out.println((kg - kg%1000)/1000 + " " + kg%1000);
+    }
+}
